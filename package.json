@@ -10,7 +10,7 @@
     "serve:ssr:angular": "node dist/angular/server/server.mjs"
   },
   "private": true,
-  "packageManager": "npm@11.19.0",
+  "packageManager": "pnpm@12.3.4",
   "dependencies": {
     "@angular/common": "^22.1.0",
     "@angular/compiler": "^22.1.0",
