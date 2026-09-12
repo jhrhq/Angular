@@ -245,7 +245,27 @@
       </svg>
       <h1>Hello, {{ username() }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <app-todo> [items]="todos()" (toggle)="handleToggleTodo($event)"> </app-todo>
+      <!--<app-todo> [items]="todos()" (toggle)="handleToggleTodo($event)"> </app-todo>-->
+
+      <div class="flex gap-2 text-sm font-semibold">
+        <!-- Points to home (app.html layout) -->
+        <a
+          routerLink="/"
+          routerLinkActive="text-blue-600 bg-blue-50"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer"
+        >
+          Home
+        </a>
+        <!-- Points to todo layout -->
+        <a
+          routerLink="/todos"
+          routerLinkActive="text-blue-600 bg-blue-50"
+          class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer"
+        >
+          My Tasks
+        </a>
+      </div>
       <router-outlet />
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
