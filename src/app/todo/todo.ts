@@ -1,4 +1,5 @@
-import { Component, input, output, ChangeDetectionStrategy, signal, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, computed } from '@angular/core';
+import { LucideCircleCheck, LucidePlus, LucideTrash } from '@lucide/angular';
 
 export interface TodoItem {
   id: number;
@@ -8,7 +9,7 @@ export interface TodoItem {
 export type FilterType = 'all' | 'active' | 'completed';
 
 @Component({
-  imports: [],
+  imports: [LucideTrash, LucidePlus, LucideCircleCheck],
   selector: 'app-todo',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
