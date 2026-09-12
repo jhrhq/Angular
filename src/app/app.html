@@ -249,14 +249,14 @@
 
       <div class="flex gap-2 text-sm font-semibold">
         <!-- Points to home (app.html layout) -->
-        <a
+        <!--<a
           routerLink="/"
           routerLinkActive="text-blue-600 bg-blue-50"
           [routerLinkActiveOptions]="{ exact: true }"
           class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer"
         >
           Home
-        </a>
+        </a>-->
         <!-- Points to todo layout -->
         <a
           routerLink="/todos"
@@ -264,6 +264,13 @@
           class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer"
         >
           My Tasks
+        </a>
+        <a
+          routerLink="/users"
+          routerLinkActive="text-blue-600 bg-blue-50"
+          class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer"
+        >
+          Users List(fetch)
         </a>
       </div>
       <router-outlet />
