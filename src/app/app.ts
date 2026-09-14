@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { SelectStatus } from './select-status/select-status';
+import { Todo } from './todo/todo';
+import { UserList } from './user-list/user-list';
 
 @Component({
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, SelectStatus],
+  imports: [RouterOutlet, Todo, UserList, SelectStatus],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

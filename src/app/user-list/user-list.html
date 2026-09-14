@@ -1,3 +1,6 @@
-@for (user of users(); track user.id) {
-<div>{{ user.name }}</div>
-}
+<div>
+  <p class="text-3xl font-bold mb-4">Fetched users list</p>
+  @for (user of users(); track user.id) {
+  <div>{{ user.name }}</div>
+  }
+</div>
