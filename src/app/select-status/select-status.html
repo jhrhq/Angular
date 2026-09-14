@@ -1,0 +1,62 @@
+<p class="text-5xl font-bold">select-status</p>
+<select (click)="handleStatus($event)">
+  <option disabled value="Not Selected">Not Selected</option>
+  @for(status of statusList(); track status){
+  <option [value]="status">{{status}}</option>
+  }
+</select>
+<!--     [ngClass]="{
+    'bg-amber-500': status() === 'In Progress',
+    'bg-green-500': status() === 'Success',
+    'bg-red-500': status() === 'Error'
+    }"
+ -->
+
+@if(status() === 'In Progress'){
+<span class="flex gap-2 items-center">
+  <span class="bg-amber-500 size-3 rounded-full"></span>
+  In Progress
+</span>
+}@else if(status() === 'Success'){
+<span class="flex gap-2 items-center">
+  <span class="bg-green-500 size-3 rounded-full"></span>
+  Success
+</span>
+}@else if(status() === 'Error'){
+<span class="flex gap-2 items-center">
+  <span class="bg-rose-500 size-3 rounded-full"></span>
+  In Progress
+</span>
+}@else {
+<span class="flex gap-2 items-center">
+  <span class="bg-yellow-500 size-3 rounded-full"></span>
+  No Status
+</span>
+}
+
+<div class="space-y-5 mt-5">
+  <p class="text-5xl font-bold">User Avalability</p>
+  <button
+    (click)="handleToggleUserStatus()"
+    class="p-3 bg-blue-500 rounded-md text-white font-medium hover:cursor-pointer"
+  >
+    User status toggle
+  </button>
+  @switch(userStatus()){ @case("Available"){
+  <span class="flex gap-2 items-center">
+    <span class="bg-green-500 size-3 rounded-full"></span>
+    {{userStatus()}}
+  </span>
+  } @case("Offline"){
+  <span class="flex gap-2 items-center">
+    <span class="bg-red-500 size-3 rounded-full"></span>
+    {{userStatus()}}
+  </span>
+  } @default{
+  <span class="flex gap-2 items-center">
+    <span class="bg-amber-500 size-3 rounded-full"></span>
+    No status
+  </span>
+
+  } }
+</div>

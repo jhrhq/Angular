@@ -39,7 +39,7 @@ export interface User {
 })
 export class UserList implements OnInit {
   private http = inject(HttpClient);
-  users = signal<any[]>([]);
+  users = signal<User[]>([]);
 
   ngOnInit() {
     this.http
