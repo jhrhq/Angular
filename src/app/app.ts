@@ -3,9 +3,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { SelectStatus } from './select-status/select-status';
 import { Todo } from './todo/todo';
 import { UserList } from './user-list/user-list';
+import { List } from './list/list';
 
 @Component({
-  imports: [RouterOutlet, Todo, UserList, SelectStatus],
+  imports: [RouterOutlet, Todo, UserList, SelectStatus, List],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
