@@ -1,4 +1,31 @@
-<div class="">
+<div class="mt-4">
   <h1 class="text-5xl">Lists Using *ngFor</h1>
   <p *ngFor="let list of lists()">{{list}}</p>
+</div>
+<div class="mt-4 space-y-4">
+  <h2 class="text-2xl font-bold">Passing Props</h2>
+  <input
+    id="fruit"
+    type="text"
+    (input)="addFruit.set($event.target.value)"
+    [value]="addFruit()"
+    placeholder="apple"
+    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+  />
+  <button
+    class="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors duration-150 shadow-sm flex items-center gap-1.5 cursor-pointer"
+    type="button"
+    (click)="handleUpdateFruits()"
+  >
+    Add Banana
+  </button>
+  @for(fruit of fruits(); track fruit) {
+  <app-child-list [fruit]="fruit" (selected)="onFruitSelect($event)" />
+  } @empty {
+  <p class="text-red-400 italic text-sm">No items added yet.</p>
+  } @if(selectedFruit(); as selected) {
+  <div class="mt-4 py-2 px-3 bg-teal-100 border border-teal-100">
+    <strong>Active Selection:</strong> {{ selected }}
+  </div>
+  }
 </div>
