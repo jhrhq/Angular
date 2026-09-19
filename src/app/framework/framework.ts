@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -8,4 +8,9 @@ import { Component, input } from '@angular/core';
 })
 export class Framework {
   framework = input.required<string>();
+  selectFramework = output<string>();
+
+  choose() {
+    this.selectFramework.emit(this.framework());
+  }
 }
