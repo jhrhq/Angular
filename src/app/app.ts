@@ -5,9 +5,10 @@ import { Todo } from './todo/todo';
 import { UserList } from './user-list/user-list';
 import { List } from './list/list';
 import { single } from 'rxjs';
+import { Frameworks } from './frameworks/frameworks';
 
 @Component({
-  imports: [RouterOutlet, Todo, UserList, SelectStatus, List],
+  imports: [RouterOutlet, Todo, UserList, SelectStatus, List, Frameworks],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

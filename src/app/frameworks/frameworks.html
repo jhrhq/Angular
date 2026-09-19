@@ -1,0 +1,11 @@
+<h1 class="text-lg font-bold">
+  Frameworks
+  <span class="italic font-normal text-base font-serif">
+    (passing props from parent to children)
+  </span>
+</h1>
+<ul>
+  @for(framework of frameworks(); track framework){
+  <app-framework [framework]="framework"></app-framework>
+  }
+</ul>
