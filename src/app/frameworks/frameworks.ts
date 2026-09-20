@@ -17,11 +17,18 @@ export class Frameworks {
   }
 
   addValue() {
+    if (!this.inputValue()) {
+      return;
+    }
     this.frameworks.update((data) => [...data, this.inputValue()]);
     this.inputValue.set('');
   }
 
   onSelectedFramework(value: string) {
     this.selectedFramework.set(value);
+  }
+
+  onDeleteFramework(value: string) {
+    this.frameworks.update((data) => data.filter((item) => item != value));
   }
 }

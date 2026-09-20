@@ -24,7 +24,11 @@
 
 <ul>
   @for(framework of frameworks(); track framework){
-  <app-framework [framework]="framework" (selectFramework)="onSelectedFramework($event)">
+  <app-framework
+    [framework]="framework"
+    (selectFramework)="onSelectedFramework($event)"
+    (deleteFramework)="onDeleteFramework($event)"
+  >
   </app-framework>
   }
 </ul>

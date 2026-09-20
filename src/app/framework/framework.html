@@ -1,9 +1,17 @@
 <li class="font-medium flex gap-2 mt-4 items-center justify-between border p-3 rounded-md">
   {{framework()}}
-  <button
-    (click)="choose()"
-    class="px-2 py-0.5 tracking-wide border border-blue-600 capitalize font-medium transition-colors duration-300 transform text-blue-600 rounded-lg hover:text-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
-  >
-    Select
-  </button>
+  <span class="inline-flex gap-2">
+    <button
+      (click)="choose()"
+      class="px-2 py-0.5 tracking-wide border border-blue-600 capitalize font-medium transition-colors duration-300 transform text-blue-600 rounded-lg hover:text-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
+    >
+      Select
+    </button>
+    <button
+      (click)="delete()"
+      class="px-2 py-0.5 tracking-wide border border-red-600 capitalize font-medium transition-colors duration-300 transform text-red-600 rounded-lg hover:text-red-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
+    >
+      Delete
+    </button>
+  </span>
 </li>
