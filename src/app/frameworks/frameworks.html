@@ -36,3 +36,23 @@
 <div class="mt-4 py-2 px-3 bg-teal-100 border border-teal-100">
   <strong>Active Selection:</strong> {{ selectedFramework() }}
 </div>
+
+<div class="flex gap-2 mt-4">
+  <button
+    (click)="counter.increment()"
+    class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
+  >
+    +
+  </button>
+  <span
+    class="px-6 py-2 font-bold tracking-wide text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
+  >
+    {{counter.count()}}
+  </span>
+  <button
+    (click)="counter.decrement()"
+    class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
+  >
+    -
+  </button>
+</div>

@@ -1,5 +1,6 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { Framework } from '../framework/framework';
+import { Count } from '../store/count';
 
 @Component({
   imports: [Framework],
@@ -11,6 +12,11 @@ export class Frameworks {
   inputValue = signal('');
   frameworks = signal(['React', 'Angular', 'Svelte', 'Solid', 'Astro']);
   selectedFramework = signal('');
+
+  // using global sttore
+  readonly counter = inject(Count);
+
+  // global store ends
 
   handleChange(value: string) {
     this.inputValue.set(value);
