@@ -247,7 +247,7 @@
             <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
           </defs>
         </svg>
-        <h1>Hello, {{ username() }}</h1>
+        <h1>Hello, {{ username() | lowercase | trimText:5 }}</h1>
         <p>Congratulations! Your app is running. 🎉</p>
         <p>CLI! Command Line Interface 💻</p>
       </div>
@@ -335,6 +335,8 @@
       </div>
     </div>
   </div>
+
+  <div class="content-wrapper">{{"kebab case testing" | kebabCase}}</div>
   <app-cart-summary></app-cart-summary>
   <!--Frameworks-->
   <div class="content-wrapper flex-col">
