@@ -393,10 +393,36 @@
 
     <!--using common module-->
     <app-list />
-    <a routerLink="/">Home</a>
-    <!--<a routerLink="/test">Test Home</a>-->
-    <a routerLink="/about">Home</a>
-    <a routerLink="/profile">Home</a>
+
+    <nav class="bg-white shadow dark:bg-gray-800">
+      <div
+        class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300"
+      >
+        <a
+          routerLink="/"
+          class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
+          >home</a
+        >
+
+        <a
+          routerLink="/profile"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
+          >Profile</a
+        >
+
+        <a
+          routerLink="/about"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
+          >About</a
+        >
+
+        <a
+          routerLink="/home"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
+          >home</a
+        >
+      </div>
+    </nav>
 
     <router-outlet />
   </div>
