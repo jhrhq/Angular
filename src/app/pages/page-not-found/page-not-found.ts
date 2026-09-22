@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './page-not-found.css',
   templateUrl: './page-not-found.html',
 })
-export class PageNotFound {}
+export class PageNotFound {
+  private router = inject(Router);
+
+  goToHome() {
+    this.router.navigate(['/']);
+  }
+}
