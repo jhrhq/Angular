@@ -14,6 +14,6 @@ export class Login {
   });
 
   onSubmit() {
-    console.log(this.loginForm.value);
+    console.log(this.loginForm.value.email);
   }
 }
