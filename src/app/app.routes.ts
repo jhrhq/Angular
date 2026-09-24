@@ -4,11 +4,11 @@ import { Dashboard } from './vehicle-renting/dashboard/dashboard';
 import { Home } from './pages/home/home';
 import { About } from './pages/about/about';
 import { Profile } from './pages/profile/profile';
-import { Login } from './pages/login/login';
 import { Layout } from './vehicle-renting/layout/layout';
 import { Booking } from './vehicle-renting/booking/booking';
 import { VehicleMaster } from './vehicle-renting/vehicle-master/vehicle-master';
 import { CustomerListing } from './vehicle-renting/customer-listing/customer-listing';
+import { Login } from './vehicle-renting/login/login';
 
 /*
 export const routes: Routes = [

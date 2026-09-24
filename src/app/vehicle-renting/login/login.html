@@ -1,81 +1,171 @@
-<div
-  class="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950 p-4 transition-colors"
->
+<div class="flex min-h-screen font-sans bg-white">
+  <!-- Left Panel: Brand & Visuals (Hidden on Mobile) -->
   <div
-    class="w-full max-w-md bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl p-8 space-y-6"
+    class="relative hidden lg:flex lg:w-1/2 bg-slate-950 items-center justify-center overflow-hidden"
   >
-    <!-- Header -->
-    <div class="text-center space-y-2">
-      <div
-        class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-600 text-white font-bold text-xl shadow-lg shadow-indigo-500/30"
-      >
-        🚗
+    <!-- Modern Mesh Gradient Background -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-950 to-black"
+    ></div>
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom_right,white,transparent)]"
+    ></div>
+
+    <div class="relative z-10 max-w-lg p-12">
+      <div class="flex items-center gap-2 mb-12 text-white">
+        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          ></path>
+        </svg>
+        <span class="text-xl font-bold tracking-wide">PULSEFLOW</span>
       </div>
-      <h1 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
-        DriveFlow Portal
+      <h1 class="text-4xl font-bold text-white tracking-tight mb-6 leading-tight">
+        Manage your premium fleet with precision.
       </h1>
-      <p class="text-sm text-slate-500 dark:text-slate-400">
-        Enter your credentials to access vehicle management
+      <p class="text-slate-400 text-lg">
+        Experience real-time telemetry, exclusive vehicle allocation, and seamless team
+        collaboration in one unified workspace.
       </p>
     </div>
+  </div>
 
-    <!-- Login Form -->
-    <form class="space-y-4">
-      <div>
-        <label
-          class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
-          >Email Address</label
+  <!-- Right Panel: User-Focused Form -->
+  <div class="flex w-full lg:w-1/2 items-center justify-center p-8 sm:p-12 lg:p-24">
+    <div class="w-full max-w-md">
+      <div class="mb-10 text-center lg:text-left">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-2">Welcome back</h2>
+        <p class="text-sm text-gray-500">
+          Don't have an account?
+          <a href="#" class="font-semibold text-blue-600 hover:text-blue-500 transition-colors"
+            >Request an invite</a
+          >
+        </p>
+      </div>
+
+      <!-- OAuth / SSO: User-Focused Convenience -->
+      <!--   <div class="grid grid-cols-2 gap-4 mb-8">
+        <button
+          type="button"
+          class="flex items-center justify-center w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-300 transition-all focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-200"
         >
-        <input
-          type="email"
-          placeholder="admin@driveflow.com"
-          value="admin@driveflow.com"
-          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transition"
-        />
-      </div>
+          <svg
+            class="w-5 h-5 mr-2"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              fill="#4285F4"
+            />
+            <path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853"
+            />
+            <path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335"
+            />
+          </svg>
+          Google
+        </button>
+        <button
+          type="button"
+          class="flex items-center justify-center w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-300 transition-all focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-200"
+        >
+          <svg class="w-5 h-5 mr-2 text-black" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M16.365 21.46c-1.315.658-2.395.733-3.692.053-1.44-.75-2.85-1.127-4.14-.143-1.637 1.25-3.087.65-4.2-1.317-2.483-4.38-2.607-9.567-.53-12.783C5.352 4.887 7.218 3.95 8.922 4.025c1.472.063 2.72.825 3.534.825.82 0 2.277-.872 3.974-.752 1.577.062 3.003.708 3.936 1.94-3.415 2.115-2.863 6.444.62 7.795-1.025 2.658-2.628 5.485-4.62 7.627zM11.95 3.55c-.07-1.85 1.48-3.55 3.21-3.55 1.58.11 2.87 1.7 2.82 3.45-1.68.04-3.32-1.63-3.18-3.4z"
+            />
+          </svg>
+          Apple
+        </button>
+      </div> -->
 
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <label
-            class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider"
-            >Password</label
-          >
-          <a
-            href="#"
-            class="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
-            >Forgot?</a
-          >
+      <!--    <div class="relative flex items-center mb-8">
+        <div class="flex-grow border-t border-gray-100"></div>
+        <span class="flex-shrink-0 mx-4 text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >Or continue with email</span
+        >
+        <div class="flex-grow border-t border-gray-100"></div>
+      </div> -->
+
+      <!-- Credential Form -->
+      <form class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1.5">Work Email</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg
+                class="h-5 w-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="email"
+              class="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-xl bg-gray-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
+              placeholder="name@company.com"
+            />
+          </div>
         </div>
-        <input
-          type="password"
-          value="••••••••"
-          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transition"
-        />
-      </div>
 
-      <div class="flex items-center justify-between">
-        <label class="flex items-center space-x-2 cursor-pointer">
-          <input
-            type="checkbox"
-            checked
-            class="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-800"
-          />
-          <span class="text-xs text-slate-600 dark:text-slate-400">Remember me</span>
-        </label>
-      </div>
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label class="block text-sm font-medium text-gray-700">Password</label>
+            <a
+              href="#"
+              class="text-sm font-medium text-blue-600 hover:text-blue-500 transition-colors"
+              >Forgot password?</a
+            >
+          </div>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg
+                class="h-5 w-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="password"
+              class="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-xl bg-gray-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
+              placeholder="••••••••"
+            />
+          </div>
+        </div>
 
-      <button
-        type="button"
-        class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-medium text-sm rounded-lg shadow-md transition-all"
-      >
-        Sign In
-      </button>
-    </form>
-
-    <div
-      class="p-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-lg text-xs text-amber-800 dark:text-amber-300 text-center"
-    >
-      💡 <strong>POC Demo Mode:</strong> Click <i>Sign In</i> to enter dashboard.
+        <button
+          type="button"
+          class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 transition-all mt-6"
+        >
+          Sign In to Workspace
+        </button>
+      </form>
     </div>
   </div>
 </div>
