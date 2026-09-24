@@ -1,0 +1,209 @@
+<div
+  class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row transition-colors"
+>
+  <!-- Mobile Top Bar (Visible only on mobile screens) -->
+  <header
+    class="md:hidden flex items-center justify-between p-4 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-30"
+  >
+    <div class="flex items-center space-x-3">
+      <div
+        class="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center text-lg shadow-md shadow-indigo-500/30"
+      >
+        🚗
+      </div>
+      <span class="font-bold text-slate-900 dark:text-white text-lg tracking-tight">DriveFlow</span>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <!-- Dark mode toggle mockup -->
+      <button
+        type="button"
+        class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+      >
+        🌙
+      </button>
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+      >
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation (Desktop Fixed & Mobile Collapsible) -->
+  <aside
+    class="w-full md:w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex-shrink-0 flex flex-col justify-between hidden md:flex sticky top-0 h-screen z-20"
+  >
+    <div>
+      <!-- Brand Logo Header -->
+      <div
+        class="h-16 flex items-center space-x-3 px-6 border-b border-slate-200 dark:border-slate-800"
+      >
+        <div
+          class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center text-xl shadow-lg shadow-indigo-500/30"
+        >
+          🚗
+        </div>
+        <div>
+          <h1 class="font-bold text-slate-900 dark:text-white text-lg tracking-tight leading-none">
+            DriveFlow
+          </h1>
+          <span
+            class="text-[10px] font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase"
+            >Fleet Manager</span
+          >
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="p-4 space-y-1.5 text-sm font-medium">
+        <!-- Dashboard Link -->
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
+          class="flex items-center space-x-3 px-4 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          <span class="text-lg">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <!-- Vehicle Listing -->
+        <a
+          routerLink="/vehicles"
+          routerLinkActive="bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
+          class="flex items-center space-x-3 px-4 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          <span class="text-lg">🚘</span>
+          <span>Vehicle Listing</span>
+        </a>
+
+        <!-- Create Vehicle -->
+        <a
+          routerLink="/vehicles/create"
+          routerLinkActive="bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
+          class="flex items-center space-x-3 px-4 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          <span class="text-lg">➕</span>
+          <span>Add Vehicle</span>
+        </a>
+
+        <!-- Book Vehicle -->
+        <a
+          routerLink="/book"
+          routerLinkActive="bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
+          class="flex items-center space-x-3 px-4 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          <span class="text-lg">🔑</span>
+          <span>Book Vehicle</span>
+        </a>
+
+        <!-- Booking Listing / Filter -->
+        <a
+          routerLink="/bookings"
+          routerLinkActive="bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
+          class="flex items-center space-x-3 px-4 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          <span class="text-lg">📋</span>
+          <span>Booking Listing</span>
+        </a>
+
+        <!-- Customer Ledger -->
+        <a
+          routerLink="/ledger"
+          routerLinkActive="bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
+          class="flex items-center space-x-3 px-4 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        >
+          <span class="text-lg">💳</span>
+          <span>Customer Ledger</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Sidebar Bottom / User Badge -->
+    <div class="p-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
+      <div
+        class="flex items-center justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800"
+      >
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-400 font-bold flex items-center justify-center text-xs"
+          >
+            TH
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-slate-900 dark:text-white leading-tight">
+              Tafhim Hasan
+            </p>
+            <p class="text-[10px] text-slate-500 dark:text-slate-400">Admin</p>
+          </div>
+        </div>
+        <a
+          routerLink="/login"
+          title="Logout"
+          class="text-xs text-slate-400 hover:text-rose-500 p-1"
+        >
+          🚪
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Work Area -->
+  <div class="flex-1 flex flex-col min-w-0 min-h-screen">
+    <!-- Desktop Header -->
+    <header
+      class="hidden md:flex items-center justify-between h-16 px-8 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-10"
+    >
+      <!-- Global Quick Search -->
+      <div class="w-72">
+        <div class="relative">
+          <span
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs"
+            >🔍</span
+          >
+          <input
+            type="text"
+            placeholder="Search vehicles, bookings..."
+            class="w-full pl-9 pr-4 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+      </div>
+
+      <!-- Right Header Tools -->
+      <div class="flex items-center space-x-4">
+        <!-- System Status Badge -->
+        <span
+          class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-400 dark:border-emerald-800"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> POC
+          Live
+        </span>
+
+        <!-- Dark/Light Theme Toggle Mockup -->
+        <button
+          type="button"
+          class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition"
+          title="Toggle Theme"
+        >
+          🌙
+        </button>
+
+        <!-- Notifications Indicator -->
+        <button
+          type="button"
+          class="relative p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition"
+        >
+          🔔
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-indigo-600"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Central Routing Outlet -->
+    <main class="flex-1 p-4 sm:p-6 lg:p-8">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

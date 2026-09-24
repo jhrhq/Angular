@@ -1,0 +1,147 @@
+<div class="max-w-4xl mx-auto p-6 space-y-6">
+  <!-- Header -->
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+    <div>
+      <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Add New Vehicle</h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        Register a new vehicle into your rental fleet
+      </p>
+    </div>
+    <button
+      type="button"
+      class="px-4 py-2 text-sm text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+    >
+      ← Back to Vehicles
+    </button>
+  </div>
+
+  <!-- Main Card -->
+  <div
+    class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 space-y-6 shadow-sm"
+  >
+    <form class="space-y-6">
+      <!-- Grid Fields -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+            >Vehicle Name / Model</label
+          >
+          <input
+            type="text"
+            placeholder="e.g. Tesla Model 3 Long Range"
+            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+            >License Plate Number</label
+          >
+          <input
+            type="text"
+            placeholder="e.g. ABC-9876"
+            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+            >Vehicle Category</label
+          >
+          <select
+            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+          >
+            <option>SUV</option>
+            <option>Sedan</option>
+            <option>Luxury / Sports</option>
+            <option>EV / Hybrid</option>
+            <option>Van / Bus</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+            >Daily Rent Rate ($)</label
+          >
+          <input
+            type="number"
+            placeholder="85.00"
+            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+            >Transmission</label
+          >
+          <div class="flex gap-4 pt-1">
+            <label
+              class="flex items-center space-x-2 text-sm text-slate-700 dark:text-slate-300 cursor-pointer"
+            >
+              <input
+                type="radio"
+                name="transmission"
+                checked
+                class="text-indigo-600 focus:ring-indigo-500"
+              />
+              <span>Automatic</span>
+            </label>
+            <label
+              class="flex items-center space-x-2 text-sm text-slate-700 dark:text-slate-300 cursor-pointer"
+            >
+              <input
+                type="radio"
+                name="transmission"
+                class="text-indigo-600 focus:ring-indigo-500"
+              />
+              <span>Manual</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+            >Seating Capacity</label
+          >
+          <input
+            type="number"
+            placeholder="5"
+            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+      </div>
+
+      <!-- Drag & Drop Upload Zone -->
+      <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+          >Vehicle Photo</label
+        >
+        <div
+          class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-xl p-6 text-center bg-slate-50 dark:bg-slate-800/50 hover:border-indigo-500 transition cursor-pointer"
+        >
+          <div class="text-3xl mb-2">📷</div>
+          <p class="text-sm font-medium text-slate-700 dark:text-slate-300">
+            Click to upload or drag & drop image
+          </p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">PNG, JPG or WEBP up to 5MB</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex justify-end gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <button
+          type="button"
+          class="px-5 py-2.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+        >
+          Cancel
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg shadow-md transition"
+        >
+          Save Vehicle
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

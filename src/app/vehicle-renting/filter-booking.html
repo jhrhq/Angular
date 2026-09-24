@@ -1,0 +1,98 @@
+<div class="max-w-6xl mx-auto p-6 space-y-6">
+  <!-- Filter Panel Header -->
+  <div>
+    <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Filter & Search Bookings</h1>
+    <p class="text-sm text-slate-500 dark:text-slate-400">
+      Search reservation records using multiple filter parameters
+    </p>
+  </div>
+
+  <!-- Filter Card Controls -->
+  <div
+    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm space-y-6"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Search Input -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-2"
+          >Search Keyword</label
+        >
+        <input
+          type="text"
+          placeholder="Customer name, booking ID, plate #"
+          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+        />
+      </div>
+
+      <!-- Status Dropdown -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-2"
+          >Booking Status</label
+        >
+        <select
+          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+        >
+          <option value="">All Statuses</option>
+          <option value="active">Active</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+
+      <!-- Category Filter -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-2"
+          >Vehicle Category</label
+        >
+        <select
+          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-indigo-500"
+        >
+          <option value="">All Categories</option>
+          <option value="suv">SUV</option>
+          <option value="sedan">Sedan</option>
+          <option value="ev">EV / Electric</option>
+          <option value="luxury">Luxury</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Date Range Row -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-2"
+          >From Date</label
+        >
+        <input
+          type="date"
+          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm"
+        />
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-2"
+          >To Date</label
+        >
+        <input
+          type="date"
+          class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm"
+        />
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-end gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+      <button
+        type="button"
+        class="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+      >
+        Reset Filters
+      </button>
+      <button
+        type="button"
+        class="px-5 py-2 text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg shadow-sm transition"
+      >
+        Apply Filters
+      </button>
+    </div>
+  </div>
+</div>

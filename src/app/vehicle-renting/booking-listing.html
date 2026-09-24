@@ -1,0 +1,139 @@
+<div class="max-w-7xl mx-auto p-6 space-y-6">
+  <!-- Header & Actions Bar -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Booking Management</h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        View and manage all vehicle reservations
+      </p>
+    </div>
+    <div class="flex gap-2">
+      <button
+        type="button"
+        class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-sm transition"
+      >
+        + New Reservation
+      </button>
+    </div>
+  </div>
+
+  <!-- Table Container -->
+  <div
+    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm"
+  >
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr
+            class="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
+          >
+            <th class="p-4">Booking ID</th>
+            <th class="p-4">Customer</th>
+            <th class="p-4">Vehicle</th>
+            <th class="p-4">Duration</th>
+            <th class="p-4">Total Fee</th>
+            <th class="p-4">Status</th>
+            <th class="p-4 text-right">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-sm">
+          <!-- Row 1: Active -->
+          <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/40 transition">
+            <td class="p-4 font-mono font-semibold text-indigo-600 dark:text-indigo-400">
+              #BK-9021
+            </td>
+            <td class="p-4 font-medium text-slate-900 dark:text-white">John Doe</td>
+            <td class="p-4 text-slate-700 dark:text-slate-300">Tesla Model 3</td>
+            <td class="p-4 text-xs text-slate-500 dark:text-slate-400">Sep 24 - Sep 27, 2026</td>
+            <td class="p-4 font-semibold text-slate-900 dark:text-white">$360.00</td>
+            <td class="p-4">
+              <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-400 dark:border-emerald-800"
+              >
+                Active
+              </span>
+            </td>
+            <td class="p-4 text-right space-x-2">
+              <button
+                class="text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600"
+              >
+                View
+              </button>
+              <button class="text-xs font-medium text-rose-600 hover:underline">Return</button>
+            </td>
+          </tr>
+
+          <!-- Row 2: Pending -->
+          <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/40 transition">
+            <td class="p-4 font-mono font-semibold text-indigo-600 dark:text-indigo-400">
+              #BK-9022
+            </td>
+            <td class="p-4 font-medium text-slate-900 dark:text-white">Sarah Jenkins</td>
+            <td class="p-4 text-slate-700 dark:text-slate-300">BMW iX SUV</td>
+            <td class="p-4 text-xs text-slate-500 dark:text-slate-400">Oct 01 - Oct 04, 2026</td>
+            <td class="p-4 font-semibold text-slate-900 dark:text-white">$415.00</td>
+            <td class="p-4">
+              <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/60 dark:text-amber-400 dark:border-amber-800"
+              >
+                Pending
+              </span>
+            </td>
+            <td class="p-4 text-right space-x-2">
+              <button
+                class="text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600"
+              >
+                View
+              </button>
+              <button class="text-xs font-medium text-emerald-600 hover:underline">Confirm</button>
+            </td>
+          </tr>
+
+          <!-- Row 3: Completed -->
+          <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/40 transition">
+            <td class="p-4 font-mono font-semibold text-indigo-600 dark:text-indigo-400">
+              #BK-8991
+            </td>
+            <td class="p-4 font-medium text-slate-900 dark:text-white">Michael Smith</td>
+            <td class="p-4 text-slate-700 dark:text-slate-300">Ford Mustang GT</td>
+            <td class="p-4 text-xs text-slate-500 dark:text-slate-400">Sep 15 - Sep 18, 2026</td>
+            <td class="p-4 font-semibold text-slate-900 dark:text-white">$290.00</td>
+            <td class="p-4">
+              <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700"
+              >
+                Completed
+              </span>
+            </td>
+            <td class="p-4 text-right space-x-2">
+              <button
+                class="text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600"
+              >
+                Print Receipt
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination Footer -->
+    <div
+      class="px-4 py-3 bg-slate-50 dark:bg-slate-800/40 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400"
+    >
+      <span>Showing 1 to 3 of 42 bookings</span>
+      <div class="flex gap-1">
+        <button
+          class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded hover:bg-white dark:hover:bg-slate-800"
+        >
+          Prev
+        </button>
+        <button
+          class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded hover:bg-white dark:hover:bg-slate-800"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
