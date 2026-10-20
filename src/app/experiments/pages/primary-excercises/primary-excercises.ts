@@ -4,8 +4,8 @@ import { UserList } from '../../user-list/user-list';
 import { SelectStatus } from '../../select-status/select-status';
 import { List } from '../../list/list';
 import { Frameworks } from '../../frameworks/frameworks';
-import { CartSummaryComponent } from '../../cart-summary';
 import { KebabCasePipe } from '../../custom-pipe/kebab-case.pipe';
+import { CartSummaryComponent } from '../../../cart-summary';
 
 @Component({
   imports: [Todo, UserList, SelectStatus, List, Frameworks, CartSummaryComponent, KebabCasePipe],

@@ -1,44 +1,26 @@
-<!-- <main class="main">
-  <nav class="bg-white shadow dark:bg-gray-800">
-    <div
-      class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300"
-    >
-      <a
-        routerLink="/"
-        class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
-        >home</a
-      >
-
-      <a
-        routerLink="/profile"
-        [queryParams]="{id:1, name: 'jo', age:29 }"
-        class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-        >Profile</a
-      >
-
-      <a
-        routerLink="/about"
-        class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-        >About</a
-      >
-
-      <a
-        routerLink="/home"
-        class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-        >home</a
-      >
-      <a
-        routerLink="/login"
-        class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-        >Login</a
-      >
-      <a
-        routerLink="/dashboard"
-        class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-        >Dashboard</a
-      >
+<app-header />
+<main>
+  <div class="grid grid-cols-12">
+    <div class="col-span-3">
+      <app-sidebar>
+        @for (user of users; track user.id) {
+        <li>
+          <app-users [user]="user" (select)="onSelectUser($event)" />
+        </li>
+        }
+      </app-sidebar>
     </div>
-  </nav>
-
-</main> -->
-<router-outlet />
+    <section class="bg-white dark:bg-gray-900 col-span-9">
+      @if (getSelectedUser) {
+      <app-tasks [name]="getSelectedUser?.name" [userId]="getSelectedUser?.id" />
+      } @else {
+      <div class="w-full overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+        <div class="py-5 text-center">
+          <p class="block text-xl font-bold text-gray-800 dark:text-white">No user is selected</p>
+          <span class="text-sm text-gray-700 dark:text-gray-200">Please, select a user</span>
+        </div>
+      </div>
+      }
+    </section>
+  </div>
+</main>

@@ -1,0 +1,31 @@
+@if (isAddingTask) {
+  <app-new-task [userId]="userId" (close)="onCloseAddTask()" />
+}
+
+<section id="tasks">
+  <header
+    class="max-w-2xl px-8 py-4 flex items-center justify-between bg-white rounded-lg shadow-md dark:bg-gray-800/60 mb-4"
+  >
+    <h2
+      class="text-xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline"
+    >
+      {{ name }}'s Tasks
+    </h2>
+    <menu>
+      <button
+        (click)="onStartAddTask()"
+        class="px-3 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors duration-150 shadow-sm flex items-center gap-1.5 cursor-pointer"
+      >
+        Add Task
+      </button>
+    </menu>
+  </header>
+
+  <ul class="space-y-4">
+    @for (task of selectedUserTasks; track task.id) {
+      <li>
+        <app-task [task]="task" />
+      </li>
+    }
+  </ul>
+</section>

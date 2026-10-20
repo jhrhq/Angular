@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-import { CartStore } from './store/cart-store';
+import { CartStore } from './experiments/store/cart-store';
 
 @Component({
   selector: 'app-cart-summary',
